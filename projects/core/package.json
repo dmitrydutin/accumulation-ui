@@ -1,0 +1,28 @@
+{
+  "name": "accumulation-ui",
+  "version": "0.0.15",
+  "description": "Super fast and modern framework for web application development",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitrydutin/accumulation-ui.git"
+  },
+  "keywords": [
+    "angular",
+    "angular-components",
+    "accumulation",
+    "accumulation-ui"
+  ],
+  "author": "Dmitry Dutin <dmitrydutin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitrydutin/accumulation-ui/issues"
+  },
+  "homepage": "https://github.com/dmitrydutin/accumulation-ui#readme",
+  "peerDependencies": {
+    "@angular/common": "^12.1.0",
+    "@angular/core": "^12.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.2.0"
+  }
+}

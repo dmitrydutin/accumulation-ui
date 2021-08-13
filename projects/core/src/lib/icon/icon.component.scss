@@ -1,0 +1,21 @@
+.icon {
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+}
+
+.github {
+  mask: var(--svg-github) no-repeat center;
+}
+
+.google {
+  mask: var(--svg-google) no-repeat center;
+}
+
+.facebook {
+  mask: var(--svg-facebook) no-repeat center;
+}
+
+.lock {
+  mask: var(--svg-lock) no-repeat center;
+}

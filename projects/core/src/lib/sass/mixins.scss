@@ -1,0 +1,5 @@
+@mixin button($class, $theme) {
+  ::ng-deep html[theme='#{$theme}'] #{$class} {
+    @content;
+  }
+}
