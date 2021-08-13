@@ -1,9 +1,7 @@
-<button class="button" [ngClass]="color" [disabled]="disabled" (click)="onClick($event)">
-  <span class="button__image" *ngIf="icon">
-    <acc-icon [icon]="icon"></acc-icon>
-  </span>
+<span class="image" *ngIf="icon">
+  <acc-icon [icon]="icon"></acc-icon>
+</span>
 
-  <span class="button__text">
-    <ng-content></ng-content>
-  </span>
-</button>
+<span class="text">
+  <ng-content></ng-content>
+</span>

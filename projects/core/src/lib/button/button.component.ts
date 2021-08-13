@@ -1,21 +1,22 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, Input, HostBinding } from '@angular/core';
+import { Color } from './button.interface';
+import { Icon } from '../icon/icon.interface';
 
 @Component({
-  selector: 'acc-button',
+  selector: 'button[acc-button]',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent implements OnInit {
-  @Input() color: string = 'default';
-  @Input() icon: string = '';
-  @Input() disabled: boolean = false;
-  @Output() click = new EventEmitter<Event>();
+  @Input() color: Color = 'light';
+  @Input() icon!: Icon;
+
+  @HostBinding('class') get getClass() {
+    return this.color;
+  }
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  onClick(event: Event) {
-    this.click.emit(event);
-  }
 }

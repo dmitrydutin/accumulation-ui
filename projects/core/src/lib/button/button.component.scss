@@ -1,4 +1,4 @@
-.button {
+:host {
   height: 48px;
   width: 100%;
   padding: 0 12px;
@@ -13,7 +13,6 @@
 
   outline: none;
   cursor: pointer;
-  user-select: none;
 
   border: 1px solid;
   border-radius: 5px;
@@ -22,60 +21,59 @@
   transition-duration: 0.15s;
   transition-timing-function: ease;
 
-  &__image {
-    margin-right: 8px;
-    width: 20px;
-    height: 20px;
+  &:disabled {
+    cursor: default;
   }
 
-  &__text {
+  & > .image {
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+  }
+
+  & > .text {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 }
 
-.button {
+:host {
   color: var(--button-color);
   border-color: var(--button-border);
   background-color: var(--button-background);
 
+  &:hover,
   &:focus {
     color: var(--button-color-hover);
     border-color: var(--button-border-hover);
     background-color: var(--button-background-hover);
-    box-shadow: 0 0 0 1.5px var(--body-background), 0 0 0 3px var(--button-border-hover);
   }
 
-  &:hover {
-    color: var(--button-color-hover);
-    border-color: var(--button-border-hover);
-    background-color: var(--button-background-hover);
-  }
-
-  &:active {
+  &:active,
+  &:focus {
     box-shadow: 0 0 0 1.5px var(--body-background), 0 0 0 3px var(--button-border-hover);
   }
 
   &:disabled {
-    cursor: default;
+    box-shadow: none;
     color: var(--button-color-disabled);
     border-color: var(--button-border-disabled);
     background-color: var(--button-background-disabled);
   }
 }
 
-button.light {
-  --button-color: #242a31;
-  --button-border: #eaeaea;
+:host.light {
+  --button-color: #666666;
+  --button-border: #ced6e0;
   --button-background: #ffffff;
 
-  --button-color-hover: #242a31;
-  --button-border-hover: #eaeaea;
+  --button-color-hover: #666666;
+  --button-border-hover: #ced6e0;
   --button-background-hover: #f5f7f9;
 }
 
-button.pink {
+:host.pink {
   --button-color: #ffffff;
   --button-border: #6b4fbb;
   --button-background: #6b4fbb;
@@ -83,13 +81,9 @@ button.pink {
   --button-color-hover: #ffffff;
   --button-border-hover: #8367d3;
   --button-background-hover: #8367d3;
-
-  --button-color-disabled: #999999;
-  --button-border-disabled: #eaeaea;
-  --button-background-disabled: #fafafa;
 }
 
-button.dark {
+:host.dark {
   --button-color: #ffffff;
   --button-border: #24292e;
   --button-background: #24292e;
@@ -97,13 +91,9 @@ button.dark {
   --button-color-hover: #ffffff;
   --button-border-hover: #555555;
   --button-background-hover: #555555;
-
-  --button-color-disabled: #999999;
-  --button-border-disabled: #eaeaea;
-  --button-background-disabled: #fafafa;
 }
 
-button.blue {
+:host.blue {
   --button-color: #ffffff;
   --button-border: #4687fc;
   --button-background: #4687fc;
@@ -111,13 +101,9 @@ button.blue {
   --button-color-hover: #ffffff;
   --button-border-hover: #3f73e6;
   --button-background-hover: #3f73e6;
-
-  --button-color-disabled: #999999;
-  --button-border-disabled: #eaeaea;
-  --button-background-disabled: #fafafa;
 }
 
-button.primary {
+:host.primary {
   --button-color: #ffffff;
   --button-border: #3880ff;
   --button-background: #3880ff;
@@ -125,13 +111,9 @@ button.primary {
   --button-color-hover: #ffffff;
   --button-border-hover: #4d8dfd;
   --button-background-hover: #4d8dfd;
-
-  --button-color-disabled: #999999;
-  --button-border-disabled: #eaeaea;
-  --button-background-disabled: #fafafa;
 }
 
-button.secondary {
+:host.secondary {
   --button-color: red;
   --button-border: red;
   --button-background: red;

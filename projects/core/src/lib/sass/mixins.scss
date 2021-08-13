@@ -1,5 +1,7 @@
 @mixin button($class, $theme) {
+  //:host-context(aside)
   ::ng-deep html[theme='#{$theme}'] #{$class} {
     @content;
   }
 }
+

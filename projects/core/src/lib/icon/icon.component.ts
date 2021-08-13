@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Icon } from './icon.interface';
 
 @Component({
   selector: 'acc-icon',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./icon.component.scss'],
 })
 export class IconComponent implements OnInit {
-  @Input() icon: string = '';
+  @Input() icon!: Icon;
 
   constructor() {}
 
