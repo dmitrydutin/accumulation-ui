@@ -1,24 +1,27 @@
-.input {
+:host {
   width: 100%;
   height: 48px;
-  padding: 0 12px;
+  padding: 0 15px;
 
   font-size: 16px;
 
   outline: none;
-  border-radius: 5px;
   border: 1px solid;
+  border-radius: 5px;
+  background-color: transparent;
 
   transition-property: background-color, border-color, color, box-shadow;
   transition-duration: 0.15s;
   transition-timing-function: ease;
 }
 
-.input {
+:host {
   color: var(--input-color);
   border-color: var(--input-border);
 
   &:focus-visible {
-    border-color: var(--input-border-active);
+    //border-color: var(--input-border-active);
+
+    border-color: #97a6ba;
   }
 }
