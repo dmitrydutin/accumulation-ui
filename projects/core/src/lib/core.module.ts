@@ -23,4 +23,4 @@ import { InputComponent } from './input/input.component';
     InputComponent
   ]
 })
-export class AccumulationUICoreModule { }
+export class AccumulationUIModule { }
